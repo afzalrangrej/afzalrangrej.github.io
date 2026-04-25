@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afzal Rangrej | Data Analyst & Programmer</title>
+    
+    <!-- SEO & Social Media Meta Tags -->
+    <meta name="description" content="Portfolio of Afzal Rangrej, a passionate Data Analyst and Python Programmer creating data-driven solutions.">
+    <meta name="author" content="Afzal Rangrej">
+    <meta property="og:title" content="Afzal Rangrej - Data Analytics / Python Developer Portfolio" />
+    <meta property="og:description" content="A personal portfolio showcasing my projects and skills in web development." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta name="google-site-verification" content="Fj4LVmIaOPQ3BRH122dlFPRqy9AlDkXl4oVdMquowOk" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS & Tailwind Config -->
+    <style>
+        /* Custom Font */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            /* Darker background */
+            background-color: #050816; 
+            background-image: linear-gradient(135deg, #050816 0%, #0a0e23 50%, #101935 100%);
+            color: #e2e8f0; /* Lighter text for better contrast */
+            overflow-x: hidden;
+        }
+
+        /* Particle background container */
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1; /* Place it behind all other content */
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #050816; } /* Darker track */
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #0d9488; }
+
+        /* Animation for revealing elements on scroll */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Letter-by-letter fade+up */
+        @keyframes fadeUp {
+          from { opacity: 0; transform: translateY(20px); }
+          to   { opacity: 1; transform: translateY(0); }
+        }
+        .animated-letter {
+          display: inline-block;
+          opacity: 0;
+          animation: fadeUp 0.8s ease-out forwards;
+        }
+
+        /* Custom gradient text */
+        .gradient-text {
+            background: linear-gradient(90deg, #5eead4, #a8b2d1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    
+    <!-- This div is for the animated background -->
+    <div id="particles-js"></div>
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300" id="header">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white">A<span class="text-teal-400">R</span></a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#about" class="text-slate-300 hover:text-teal-400 transition-colors duration-300">About</a>
+                <a href="#education" class="text-slate-300 hover:text-teal-400 transition-colors duration-300">Education</a>
+                <a href="#skills" class="text-slate-300 hover:text-teal-400 transition-colors duration-300">Skills</a>
+                <a href="#projects" class="text-slate-300 hover:text-teal-400 transition-colors duration-300">Projects</a>
+                <a href="#contact" class="text-slate-300 hover:text-teal-400 transition-colors duration-300">Contact</a>
+                <a href="C:\Users\rrang\OneDrive\Desktop\afzal_resume_1.pdf" target="_blank" download class="px-4 py-2 border border-teal-400 text-teal-400 rounded-md hover:bg-teal-400 hover:bg-opacity-10 transition-all duration-300">Resume</a>
+            </div>
+            <button id="menu-btn" class="md:hidden focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/90 backdrop-blur-sm">
+            <a href="#about" class="block py-3 px-6 text-center text-slate-300 hover:bg-teal-400 hover:text-slate-900 transition-colors duration-300">About</a>
+            <a href="#education" class="block py-3 px-6 text-center text-slate-300 hover:bg-teal-400 hover:text-slate-900 transition-colors duration-300">Education</a>
+            <a href="#skills" class="block py-3 px-6 text-center text-slate-300 hover:bg-teal-400 hover:text-slate-900 transition-colors duration-300">Skills</a>
+            <a href="#projects" class="block py-3 px-6 text-center text-slate-300 hover:bg-teal-400 hover:text-slate-900 transition-colors duration-300">Projects</a>
+            <a href="#contact" class="block py-3 px-6 text-center text-slate-300 hover:bg-teal-400 hover:text-slate-900 transition-colors duration-300">Contact</a>
+            <a href="C:\Users\rrang\OneDrive\Desktop\afzal_resume_1.pdf" target="_blank" download class="block py-3 px-6 text-center text-teal-400 hover:bg-teal-400 hover:text-slate-900 transition-colors duration-300">Resume</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 relative z-10">
+
+        <!-- Hero Section -->
+        <section id="home" class="min-h-screen flex items-center">
+            <div class="w-full">
+                <p class="text-teal-400 text-lg mb-4 reveal">Hii, my name is</p>
+                <h1 class="text-4xl sm:text-6xl md:text-7xl font-bold text-slate-100 reveal" style="transition-delay: 100ms;" data-animate="heading"><br/> Afzal Rangrej</h1>
+                <h2 class="text-4xl sm:text-6xl md:text-7xl font-bold text-slate-400 mt-2 reveal" style="transition-delay: 200ms;">I analyze data and build insights.</h2>
+                <p class="mt-6 max-w-xl text-slate-400 text-lg reveal" style="transition-delay: 300ms;">
+                    I'm a data analyst focused on transforming raw data into meaningful insights. I work with Python, SQL, Excel, and Power BI to analyze datasets, build dashboards, and support data-driven decision making.
+                </p>
+                <div class="mt-8 reveal" style="transition-delay: 400ms;">
+                    <a href="#projects" class="px-8 py-4 text-teal-400 border border-teal-400 rounded-md hover:bg-teal-400 hover:bg-opacity-10 transition-all duration-300 text-lg">
+                        Check out my work!
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-24">
+            <div class="p-8 md:p-12 rounded-2xl bg-slate-900/50 backdrop-blur-xl border border-slate-800 reveal">
+                <h2 class="text-3xl font-bold text-center mb-12" data-animate="about-heading"><span class="gradient-text">01.</span> About Me</h2>
+                <div class="grid md:grid-cols-5 gap-10 items-center">
+                    <div class="md:col-span-3 text-slate-300 space-y-4 text-lg">
+                        <p>Hello! I'm Afzal, an aspiring Data Analyst passionate about turning data into valuable insights. I enjoy analyzing datasets, discovering trends, and presenting information in a clear and meaningful way.</p>
+                        <p>My work involves Python, SQL, Excel, and Power BI, where I perform data cleaning, analysis, and build interactive data visualizations and dashboards. I focus on transforming complex datasets into simple insights that support smarter decision-making.</p>
+                        <p>I’m constantly learning and building projects to strengthen my skills in data analytics, visualization, and business intelligence.</p>
+                    </div>
+                    <div class="md:col-span-2 flex justify-center">
+                        <div class="relative w-64 h-64 group">
+                            <div class="absolute inset-0 bg-teal-400 rounded-lg transform -rotate-6 group-hover:rotate-0 transition-transform duration-300"></div>
+                            <img src="C:\afzal\Me_linkedin.png" alt="Afzal Rangrej" class="relative w-full h-full object-cover rounded-lg shadow-xl">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Education Section -->
+        <section id="education" class="py-24">
+            <div class="p-8 md:p-12 rounded-2xl bg-slate-900/50 backdrop-blur-xl border border-slate-800 reveal">
+                <h2 class="text-3xl font-bold text-center mb-12" data-animate="education-heading"><span class="gradient-text">02.</span> Education</h2>
+                <div class="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+                    <div class="p-6 rounded-lg bg-slate-800/50 hover:-translate-y-2 transition-transform duration-300">
+                        <h3 class="text-xl font-semibold text-slate-100">Bachelor of Computer Applications</h3>
+                        <p class="text-teal-400 mt-1">Sardar Patel University</p>
+                        <p class="text-slate-400 text-sm mt-1">2021 – 2024</p>
+                    </div>
+                    <div class="p-6 rounded-lg bg-slate-800/50 hover:-translate-y-2 transition-transform duration-300">
+                        <h3 class="text-xl font-semibold text-slate-100">Master of Computer Applications</h3>
+                        <p class="text-teal-400 mt-1">Sardar Patel University</p>
+                        <p class="text-slate-400 text-sm mt-1">2024 – 2026</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-24">
+            <div class="p-8 md:p-12 rounded-2xl bg-slate-900/50 backdrop-blur-xl border border-slate-800 reveal">
+                <h2 class="text-3xl font-bold text-center mb-12" data-animate="skills-heading"><span class="gradient-text">03.</span> My Tech Stack</h2>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 text-center">
+                    <div class="p-4 bg-slate-800/50 rounded-lg flex flex-col items-center justify-center space-y-2 hover:-translate-y-2 transition-transform duration-300">
+                        <i class="fab fa-html5 text-4xl text-orange-500"></i>
+                        <span class="text-slate-300">HTML5</span>
+                    </div>
+                    <div class="p-4 bg-slate-800/50 rounded-lg flex flex-col items-center justify-center space-y-2 hover:-translate-y-2 transition-transform duration-300">
+                        <i class="fab fa-css3-alt text-4xl text-blue-500"></i>
+                        <span class="text-slate-300">CSS3</span>
+                    </div>
+                    <div class="p-4 bg-slate-800/50 rounded-lg flex flex-col items-center justify-center space-y-2 hover:-translate-y-2 transition-transform duration-300">
+                        <i class="fab fa-js-square text-4xl text-yellow-400"></i>
+                        <span class="text-slate-300">JavaScript</span>
+                    </div>
+                    <div class="p-4 bg-slate-800/50 rounded-lg flex flex-col items-center justify-center space-y-2 hover:-translate-y-2 transition-transform duration-300">
+                        <i class="fab fa-python text-4xl text-teal-400"></i>
+                        <span class="text-slate-300">Python</span>
+                    </div>
+                    <div class="p-4 bg-slate-800/50 rounded-lg flex flex-col items-center justify-center space-y-2 hover:-translate-y-2 transition-transform duration-300">
+                        <i class="fa fa-chart-column text-4xl text-indigo-400"></i>
+                        <span class="text-slate-300">Power BI</span>
+                    </div>
+                    <div class="p-4 bg-slate-800/50 rounded-lg flex flex-col items-center justify-center space-y-2 hover:-translate-y-2 transition-transform duration-300">
+                        <i class="fas fa-table text-4xl text-green-500"></i>
+                        <span class="text-slate-300">Excel</span>
+                    </div>
+                    <div class="p-4 bg-slate-800/50 rounded-lg flex flex-col items-center justify-center space-y-2 hover:-translate-y-2 transition-transform duration-300">
+                        <i class="fa fa-database text-4xl text-pink-500"></i>
+                        <span class="text-slate-300">MySQL</span>
+                    </div>
+                    <div class="p-4 bg-slate-800/50 rounded-lg flex flex-col items-center justify-center space-y-2 hover:-translate-y-2 transition-transform duration-300">
+                        <i class="fab fa-git-alt text-4xl text-red-500"></i>
+                        <span class="text-slate-300">Git</span>
+                    </div>
+                    <div class="p-4 bg-slate-800/50 rounded-lg flex flex-col items-center justify-center space-y-2 hover:-translate-y-2 transition-transform duration-300">
+                        <i class="fa-solid fa-chart-simple text-4xl text-red-500"></i>
+                        <span class="text-slate-300">Tableau</span>
+                    </div>
+                    <div class="p-4 bg-slate-800/50 rounded-lg flex flex-col items-center justify-center space-y-2 hover:-translate-y-2 transition-transform duration-300">
+                        <i class="fab fa-bootstrap colored text-4xl text-purple-500"></i>
+                        <span class="text-slate-300">Bootstrap</span>
+                    </div>
+                    <div class="p-4 bg-slate-800/50 rounded-lg flex flex-col items-center justify-center space-y-2 hover:-translate-y-2 transition-transform duration-300">
+                        <i class="fa fa-table colored text-4xl text-purple-500"></i>
+                        <span class="text-slate-300">Pandas</span>
+                    </div>
+                    <div class="p-4 bg-slate-800/50 rounded-lg flex flex-col items-center justify-center space-y-2 hover:-translate-y-2 transition-transform duration-300">
+                        <i class="fa fa-square-root-variable colored text-4xl text-purple-500"></i>
+                        <span class="text-slate-300">NumPy</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-24">
+            <div class="max-w-5xl mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-12" data-animate="projects-heading"><span class="gradient-text">04.</span> Things I've Built</h2>
+                <class="space-y-16">
+                    <!-- Project 1 -->
+                    <div class="grid md:grid-cols-12 gap-6 items-center reveal">
+                        <div class="md:col-span-7">
+                            <p class="text-teal-400 mb-1 text-sm">Python Project</p>
+                            <h3 class="text-2xl font-bold text-slate-100 mb-4">Online Job Portal - Hire Hub</h3>
+                            <div class="bg-slate-800/80 p-6 rounded-lg shadow-lg">
+                                <p class="text-slate-400">
+                                    Hire Hub – Online Job Portal is a web application that connects job seekers with employers to search and post job opportunities. The front end is built using HTML, CSS, JavaScript, and Bootstrap, while the back end uses Python and Django. It uses an SQLite database for storing user data, job listings, and applications, with the Django Admin Panel for easy management.
+                                </p>
+                            </div>
+                            <div class="flex flex-wrap gap-3 mt-4 text-slate-400 text-sm">
+                                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Bootstrap</span><span>Python</span><span>Django</span><span>SQLite</span><span>Django Admin Panel</span>
+                            </div>
+                            <div class="flex gap-4 mt-4">
+                                <a href="https://github.com/afzalrangrej/Online-Job-Portal" target="_blank" class="text-slate-300 hover:text-teal-400 transition-colors"><i class="fab fa-github fa-lg"></i></a>
+                            </div>
+                        </div>
+                        <div class="md:col-span-5 group">
+                            <a href="https://github.com/afzalrangrej/Online-Job-Portal" target="_blank" class="block">
+                                <div class="relative rounded-lg overflow-hidden shadow-2xl">
+                                    <img src="https://placehold.co/800x500/0f172a/2dd4bf/png?text=Hire+Hub" alt="Online Job Portal - Hire Hub" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                                    <div class="absolute inset-0 bg-slate-950/60 group-hover:bg-transparent transition-colors duration-300"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <!-- Project 2 -->
+                    <div class="grid md:grid-cols-12 gap-6 items-center reveal">
+
+                    <!-- Image / Logo (Left side) -->
+                    <div class="md:col-span-5 group md:order-1">
+                        <a href="https://github.com/afzalrangrej/Data-Professional-Survey" target="_blank" class="block">
+                            <div class="relative rounded-lg overflow-hidden shadow-2xl">
+                                <img src="https://placehold.co/800x500/0f172a/2dd4bf/png?text=Survey" 
+                                    alt="Data Professional Survey"
+                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                                <div class="absolute inset-0 bg-slate-950/60 group-hover:bg-transparent transition-colors duration-300"></div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Text (Right side) -->
+                    <div class="md:col-span-7 md:order-2">
+                        <p class="text-teal-400 mb-1 text-sm">Power BI Project</p>
+                        <h3 class="text-2xl font-bold text-slate-100 mb-4">Data Professional Survey</h3>
+
+                        <div class="bg-slate-800/80 p-6 rounded-lg shadow-lg">
+                            <p class="text-slate-400">
+                                Developed an interactive Power BI dashboard using survey data imported from Excel to analyze trends among data professionals. Performed data cleaning and transformation to prepare the raw dataset for accurate analysis. The final dashboard presents key metrics and insights in a clear and user-friendly format for better understanding of the data industry.
+                            </p>
+                        </div>
+
+                        <div class="flex flex-wrap gap-3 mt-4 text-slate-400 text-sm">
+                            <span>Power BI</span><span>Excel</span><span>Power Query</span><span>Data Cleaning</span><span>Data Visualization</span><span>Interactive Dashboard</span>
+                        </div>
+
+                        <div class="flex gap-4 mt-4">
+                            <a href="https://github.com/afzalrangrej/Data-Professional-Survey" target="_blank" class="text-slate-300 hover:text-teal-400 transition-colors">
+                                <i class="fab fa-github fa-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                    </div>
+                    <br>
+                    <br>
+                    <!-- Project 3 -->
+                     <div class="grid md:grid-cols-12 gap-6 items-center reveal">
+
+                    <!-- Text (Left side) -->
+                    <div class="md:col-span-7 order-2 md:order-1">
+                        <p class="text-teal-400 mb-1 text-sm">Excel Project</p>
+                        <h3 class="text-2xl font-bold text-slate-100 mb-4">Bike Sales Dashboard</h3>
+
+                        <div class="bg-slate-800/80 p-6 rounded-lg shadow-lg">
+                            <p class="text-slate-400">
+                                Built an interactive Excel dashboard to analyze customer purchasing behavior for bike sales. 
+                                The dashboard uses pivot tables, slicers, and charts to explore relationships between income, age, commute distance, and bike purchases. 
+                                Analysis revealed that middle-aged customers with shorter commute distances are more likely to purchase bikes, and higher income groups show stronger buying patterns. 
+                                The dashboard allows dynamic filtering by marital status, education, region, and gender to uncover insights across customer segments.
+                            </p>
+                        </div>
+
+                        <div class="flex flex-wrap gap-3 mt-4 text-slate-400 text-sm">
+                            <span>Excel</span><span>Pivot Tables</span><span>Pivot Charts</span><span>Data Cleaning</span><span>Data Analysis</span><span>Dashboard Design</span>
+                        </div>
+
+                        <div class="flex gap-4 mt-4">
+                            <a href="https://github.com/afzalrangrej/Bike-Sales-Dashboard" 
+                            target="_blank" 
+                            class="text-slate-300 hover:text-teal-400 transition-colors">
+                                <i class="fab fa-github fa-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Image / Logo (Right side) -->
+                    <div class="md:col-span-5 order-1 md:order-2 group">
+                        <a href="https://github.com/afzalrangrej/Bike-Sales-Dashboard" target="_blank" class="block">
+                            <div class="relative rounded-lg overflow-hidden shadow-2xl">
+                                <img src="https://placehold.co/800x500/0f172a/2dd4bf/png?text=Sales"
+                                    alt="Bike Sales Dashboard"
+                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+
+                                <div class="absolute inset-0 bg-slate-950/60 group-hover:bg-transparent transition-colors duration-300"></div>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section (Updated with Instagram & Emboss Effect) -->
+        <section id="contact" class="py-24">
+            <div class="p-8 md:p-12 rounded-2xl bg-slate-900/50 backdrop-blur-xl border border-slate-800 reveal text-center">
+                <h2 class="text-3xl font-bold mb-4" data-animate="contact-heading"><span class="gradient-text">05.</span> Get in Touch</h2>
+                <p class="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
+                  I'm currently looking for new opportunities and collaborations. Whether you have a question or just want to say hi, feel free to reach out!
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                  <a href="email: rrangrejafzal@gmail.com" target="_blank" class="flex items-center gap-3 px-5 py-3 rounded-xl bg-teal-400 text-slate-900 font-semibold border-2 border-transparent transition-all duration-300 hover:bg-white hover:text-teal-500 hover:border-teal-500 hover:scale-105 hover:shadow-lg hover:shadow-teal-500/30">
+                    <i class="fas fa-envelope text-xl"></i>
+                    <span>Gmail</span>
+                  </a>
+                  <a href="https://github.com/afzalrangrej" target="_blank" class="flex items-center gap-3 px-5 py-3 rounded-xl bg-white/10 text-white font-semibold border-2 border-white/20 transition-all duration-300 hover:bg-white hover:text-gray-900 hover:border-transparent hover:scale-105 hover:shadow-lg hover:shadow-white/20">
+                    <i class="fab fa-github text-xl"></i>
+                    <span>GitHub</span>
+                  </a>
+                  <a href="https://www.linkedin.com/in/afzal-rangrej/" target="_blank" class="flex items-center gap-3 px-5 py-3 rounded-xl bg-white/10 text-white font-semibold border-2 border-white/20 transition-all duration-300 hover:bg-white hover:text-gray-900 hover:border-transparent hover:scale-105 hover:shadow-lg hover:shadow-white/20">
+                    <i class="fab fa-linkedin-in text-xl"></i>
+                    <span>LinkedIn</span>
+                  </a>
+                  <a href="https://www.instagram.com/" target="_blank" class="flex items-center gap-3 px-5 py-3 rounded-xl bg-white/10 text-white font-semibold border-2 border-white/20 transition-all duration-300 hover:bg-white hover:text-gray-900 hover:border-transparent hover:scale-105 hover:shadow-lg hover:shadow-white/20">
+                    <i class="fab fa-instagram text-xl"></i>
+                    <span>Instagram</span>
+                  </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-white/5 py-6 text-center text-gray-400 text-sm">
+        © 2026 Afzal Rangrej. All rights reserved.
+    </footer>
+
+    <!-- Particles.js Script -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- Particles.js Configuration ---
+            particlesJS('particles-js', {
+                "particles": {
+                    "number": { "value": 60, "density": { "enable": true, "value_area": 800 } },
+                    "color": { "value": "#ffffff" },
+                    "shape": { "type": "circle" },
+                    "opacity": { "value": 0.5, "random": true, "anim": { "enable": false } },
+                    "size": { "value": 2, "random": true, "anim": { "enable": false } },
+                    "line_linked": { "enable": true, "distance": 150, "color": "#4a5568", "opacity": 0.4, "width": 1 },
+                    "move": { "enable": true, "speed": 1, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false }
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": false }, "resize": true },
+                    "modes": { "grab": { "distance": 140, "line_linked": { "opacity": 1 } } }
+                },
+                "retina_detect": true
+            });
+
+            // --- Header Scroll Effect ---
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('bg-slate-900/80', 'backdrop-blur-md', 'shadow-lg');
+                } else {
+                    header.classList.remove('bg-slate-900/80', 'backdrop-blur-md', 'shadow-lg');
+                }
+            });
+
+            // --- Mobile Menu Toggle ---
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileNavLinks = mobileMenu.querySelectorAll('a');
+
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            // --- Letter-by-letter Animation Function ---
+            function animateText(element) {
+                const textToAnimate = element.dataset.originalText || element.textContent.trim();
+                if (!textToAnimate || element.classList.contains('is-animated')) return;
+
+                element.classList.add('is-animated');
+                element.innerHTML = ''; 
+                textToAnimate.split('').forEach((char, i) => {
+                    const span = document.createElement('span');
+                    span.className = 'animated-letter';
+                    span.innerHTML = char === ' ' ? '&nbsp;' : char;
+                    span.style.animationDelay = (i * 40) + 'ms';
+                    element.appendChild(span);
+                });
+            }
+
+            // --- Intersection Observer for Repeating Animations ---
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        if (entry.target.hasAttribute('data-animate')) {
+                            animateText(entry.target);
+                        }
+                    } else {
+                        entry.target.classList.remove('active');
+                        if (entry.target.hasAttribute('data-animate')) {
+                            entry.target.classList.remove('is-animated');
+                            entry.target.innerHTML = entry.target.dataset.originalText;
+                        }
+                    }
+                });
+            }, { 
+                threshold: 0.2 
+            });
+            
+            // --- On Window Load ---
+            window.addEventListener('load', () => {
+                // Observe all reveal elements
+                document.querySelectorAll('.reveal').forEach(el => {
+                    observer.observe(el);
+                });
+                
+                // Prepare and observe all headings for repeating animations
+                document.querySelectorAll('[data-animate]').forEach(el => {
+                    // Store original text for resetting
+                    el.dataset.originalText = el.textContent.trim();
+                    // Reset the content to prepare for the first animation
+                    el.innerHTML = el.dataset.originalText; 
+                    observer.observe(el);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
